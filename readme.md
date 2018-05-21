@@ -163,6 +163,15 @@ $ composer install
 $ npm install
 $ php artisan migrate
 $ php artisan db:seed
+$ php artisan db:seed --class=FeatureTableSeeder
+```
+
+*** check the id's in database/seeds/FeaturesAnalyticalUpdateSeeder & database/seeds/AnalyticalLawUpdateSeeder before running the above commands 
+
+```sh
+$ php artisan db:seed --class=FeaturesAnalyticalUpdateSeeder
+$ php artisan db:seed --class=FeaturesAnalyticalLawUpdateSeeder
+
 ```
 
 ** npm install - errors refer known issues section.
@@ -180,10 +189,10 @@ By default if AAF used for login, Acawriter will identify and allocate roles res
 ```sh
 docker-compose exec postgres psql -U default -W -d default
 ```
-and add superadmin (role=1) into user_role table
+and add superadmin (role=4) into user_role table
 
 ```sh
-insert into user_role (user_id, role_id) values (1,1);
+insert into user_role (user_id, role_id) values (1,4);
 ```
 
 Super admin will allow for managing users as of now. (Other super admin feature & updates to follow)
@@ -195,8 +204,23 @@ Super admin will allow for managing users as of now. (Other super admin feature 
 
 * Error with the python version
 * npm install - node-sass module requires python ver 2.7.* (only) ensure that this is loaded checking the workspace.
-* Unable to save binary /var/www/node_modules/node-sass/vendor/linux-x64-59
-* node-sass@4.7.2 postinstall /var/www/node_modules/node-sass
+workspace/Dockerfile under python section possible solution in case of errors:
+
+```
+   apt-get update \
+   && apt-get -y upgrade \
+   && apt-get -y install python2.7 python-pip python-dev build-essential  \
+   && pip install --upgrade pip  \
+   && pip install --upgrade virtualenv \
+
+```
+
+
+
+
+* Unable to save binary /var/www/node_modules/node-sass/vendor/linux-x64-59 node-sass@4.7.2 postinstall /var/www/node_modules/node-sass
+* composer update issues - ensure workspace build has gone through without errors.
+
 #### Possible solutions
 The following would need to be installed into the docker workspace container, cmd to login to container 
 ```sh
