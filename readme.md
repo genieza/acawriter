@@ -19,7 +19,7 @@ $ sudo yum install git
 ```
 - Install the acawriter project
 ```sh
-$ git clone  https://github.com/uts-cic/acawriter.git
+$ git clone https://github.com/heta-io/acawriter.git
 ```
 - Install docker, docker-compose
 ```sh
