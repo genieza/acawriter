@@ -168,11 +168,15 @@ $ php artisan db:seed
 $ php artisan db:seed --class=FeatureTableSeeder
 ```
 
+## All the commands below will help you install the Genre profiles into the database.
+
 *** check the id's in database/seeds/FeaturesAnalyticalUpdateSeeder & database/seeds/AnalyticalLawUpdateSeeder before running the above commands 
 
 ```sh
 $ php artisan db:seed --class=FeaturesAnalyticalUpdateSeeder
 $ php artisan db:seed --class=FeaturesAnalyticalLawUpdateSeeder
+$ php artisan db:seed --class=FeaturesAnalyticalAccounting
+$ php artisan db:seed --class=FeaturesAnalyticalUpdateAccounting 
 
 ```
 
@@ -198,8 +202,6 @@ insert into user_role (user_id, role_id) values (1,4);
 ```
 
 Super admin will allow for managing users as of now. (Other super admin feature & updates to follow)
-
-
 
 
 ## Known Issues
