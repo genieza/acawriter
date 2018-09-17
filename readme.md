@@ -4,7 +4,7 @@
 
 <strong>AcaWriter</strong> was created by the Academic Writing Analytics project, at the UTS Connected Intelligence Centre. The software is now being shared and improved across universities in Australia and beyond, as part of the Higher Education Text Analytics open source project.
 
-### AcaWriter requires TAP & Athanor installed. 
+### AcaWriter requires TAP (https://github.com/heta-io/tap) & Athanor-server (https://github.com/heta-io/athanor-server) installed. 
 
 ## Tech Stack
 
