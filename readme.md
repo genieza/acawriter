@@ -170,16 +170,26 @@ $ php artisan db:seed
 $ php artisan db:seed --class=FeatureTableSeeder
 ```
 
-## All the commands below will help you install the Genre profiles into the database.
+## Run the following commands in order to enable resp. profiles
 
-*** check the id's in database/seeds/FeaturesAnalyticalUpdateSeeder & database/seeds/AnalyticalLawUpdateSeeder before running the above commands 
+
 
 ```sh
-$ php artisan db:seed --class=FeaturesAnalyticalUpdateSeeder
-$ php artisan db:seed --class=FeaturesAnalyticalLawUpdateSeeder
-$ php artisan db:seed --class=FeaturesAnalyticalAccounting
-$ php artisan db:seed --class=FeaturesAnalyticalUpdateAccounting 
+$php artisan db:seed --class=FeaturesTableUpdateSeeder  ---> default Analytical rule update
 
+$php artisan db:seed --class=FeatureReflectiveUpdateSeeder  ---> default Reflective update
+
+$php artisan db:seed --class=FeaturesAnalyticalCars  ---> cars feature up to date
+
+$php artisan db:seed --class=FeaturesAnalyticalLaw  ---> Law feature up to date
+
+$php artisan db:seed --class=FeaturesAnalyticalAccounting  ---> create accounting feature
+
+$php artisan db:seed --class=FeaturesAnalyticalAccountingUpdate  ---> accounting add
+
+$php artisan db:seed --class=FeaturesReflectivePharmacySeeder  --->  reflective pharmacy add
+
+$php artisan db:seed --class=FeaturesReflectivePharmacyUpdateSeeder  --->  reflective pharmacy update
 ```
 
 ** npm install - errors refer known issues section.
