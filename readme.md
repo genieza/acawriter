@@ -17,7 +17,7 @@ Laravel, Postgres, GraphQL, Redis, node, socket.io, docker, docker-compose
 - Create a new EC2 instance - type medium
 - Install Git
 ```sh
-$ sudo yum install git
+$ sudo apt install git
 ```
 - Install the acawriter project
 ```sh
@@ -25,7 +25,7 @@ $ git clone https://github.com/heta-io/acawriter.git
 ```
 - Install docker, docker-compose
 ```sh
-$ sudo yum install -y docker
+$ sudo apt install -y docker
 $ sudo usermod -aG docker ec2-user
 $ sudo service docker start
 $ sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
